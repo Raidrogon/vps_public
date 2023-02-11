@@ -26,7 +26,7 @@ proxies:
   - 
     name: hkvmess
     type: vmess
-    server: 172.67.74.160
+    server: hkv.autumnvioce.cn
     port: 443
     uuid: 3186c4b6-34dc-412f-ced2-a6f95d99e24b
     alterId: 0
