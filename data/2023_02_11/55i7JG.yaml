@@ -6,10 +6,11 @@
 #  节点数量：1
 #-------------------------------------------------------------#
 #
-mixed-port: 7890
+port: 7890
+socks-port: 7891
 allow-lan: true
 mode: Rule
-log-level: info
+log-level: silent
 external-controller: 0.0.0.0:9090
 dns:
   enabled: true
@@ -22,7 +23,7 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {"type":"vmess","name":"hkvmess","ws-opts":{"path":"/devin310"},"server":"hkv.autumnvioce.cn","port":443,"uuid":"3186c4b6-34dc-412f-ced2-a6f95d99e24b","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {name: hkvmess, server: hkv.autumnvioce.cn, port: 443, type: vmess, uuid: 3186c4b6-34dc-412f-ced2-a6f95d99e24b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /devin310, headers: {Host: hkv.autumnvioce.cn}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
